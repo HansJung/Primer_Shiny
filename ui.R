@@ -18,7 +18,7 @@ shinyUI(pageWithSidebar(
                 min = 1, max = 50, value = 30),
     
     br(),
-    sliderInput("slider_relationship", label = ("Relationship between Exercise and Cholesterol"),
+    sliderInput("slider_relationship", label = h4("Relationship between Exercise and Cholesterol"),
                 min = -2, max = -0.1, value = -0.8),
     
 
