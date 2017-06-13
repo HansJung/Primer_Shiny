@@ -7,12 +7,19 @@ shinyUI(pageWithSidebar(
   headerPanel("Exercise-Cholesterol study"),
   
   sidebarPanel(
+    checkboxGroupInput("checkGroup", 
+                       label = h3("Select a trend"), 
+                       choices = list("Aggregated Data" = 1, 
+                                      "Segregated Data" = 2),
+                       selected = 1),
     
-    radioButtons("type", "Select a trend:",
-                 list("Aggregated Data" = "agg_data",
-                      "Segregated Data" = "seg_data"
-                      )),
     br(),
+    sliderInput("slider_num_patients", label = h4("Number of patients per groups"),
+                min = 1, max = 50, value = 30),
+    
+    br(),
+    sliderInput("slider_relationship", label = ("Relationship between Exercise and Cholesterol"),
+                min = -2, max = -0.1, value = -0.8),
     
 
     helpText(
@@ -31,5 +38,6 @@ shinyUI(pageWithSidebar(
   mainPanel(
     plotOutput("scatter"),
     br()
+    # textOutput("txt")
   )
 ))
