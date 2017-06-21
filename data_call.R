@@ -22,19 +22,19 @@ data_call = function(par_slope, n_data_group){
     df[n_data_group +i,3] = '20'
   }
   
-  for (i in 1:50){ 
+  for (i in 1:n_data_group){ 
     df[n_data_group * 2+i,1] = age_30$x_val[i]
     df[n_data_group * 2+i,2] = age_30$y_val[i]
     df[n_data_group * 2+i,3] = '30'
   }
   
-  for (i in 1:50){ 
+  for (i in 1:n_data_group){ 
     df[n_data_group * 3 + i,1] = age_40$x_val[i]
     df[n_data_group * 3 + i,2] = age_40$y_val[i]
     df[n_data_group * 3 + i,3] = '40'
   }
   
-  for (i in 1:50){ 
+  for (i in 1:n_data_group){ 
     df[n_data_group * 4 +i,1] = age_50$x_val[i]
     df[n_data_group * 4 +i,2] = age_50$y_val[i]
     df[n_data_group * 4 +i,3] = '50'

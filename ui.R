@@ -14,11 +14,11 @@ shinyUI(pageWithSidebar(
                        selected = 1),
     
     br(),
-    sliderInput("slider_num_patients", label = h4("Number of patients per groups"),
+    sliderInput("slider_num_patients", label = h4("Number of patients per age groups"),
                 min = 1, max = 50, value = 30),
     
     br(),
-    sliderInput("slider_relationship", label = h4("Relationship between Exercise and Cholesterol"),
+    sliderInput("slider_relationship", label = h4("Relationship between Exercise and Cholesterol per age groups"),
                 min = -2, max = -0.1, value = -0.8),
     
 
